@@ -17,6 +17,9 @@
         <module>ENV</module>
         <!-- 网关模块-->
         <module>APP</module>
+
+        <!-- 服务模块-->
+        <module>APP-P1</module>
     </modules>
 
 </project>
