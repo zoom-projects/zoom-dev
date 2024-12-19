@@ -22,6 +22,8 @@
         <module>APP-P1</module>
         <!--语录-->
         <module>APP-P3</module>
+        <!--Nav-->
+        <module>APP-NAV</module>
     </modules>
 
 </project>
