@@ -1,0 +1,45 @@
+services:
+  redis-server:
+    image: redis
+    container_name: redis-server
+    ports:
+      - "6379:6379"
+    volumes:
+      - ./data/redis:/data
+  mysql-server:
+    image: mysql:8
+    container_name: mysql-server
+    environment:
+      MYSQL_ROOT_PASSWORD: 123456
+      MYSQL_DATABASE: zoom
+      TZ: Asia/Shanghai
+    command: mysqld --character-set-server=utf8mb4 --collation-server=utf8mb4_general_ci
+    ports:
+      - "3306:3306"
+    volumes:
+      - ./data/mysql:/var/lib/mysql
+    healthcheck:
+      test: [ "CMD", "mysqladmin" ,"ping", "-h", "localhost" ]
+      interval: 5s
+      timeout: 10s
+      retries: 10
+  openobserve_server:
+    image: public.ecr.aws/zinclabs/openobserve:latest
+    container_name: openobserve-server
+    restart: unless-stopped
+    environment:
+      ZO_ROOT_USER_EMAIL: "root@example.com"
+      ZO_ROOT_USER_PASSWORD: "Complexpass#123"
+    ports:
+      - "5080:5080"
+  nacos_server:
+    image: nacos/nacos-server
+    container_name: nacos-standalone
+    env_file:
+      - ./nacos-mysql.env
+    ports:
+      - "8848:8848"
+      - "9848:9848"
+    depends_on:
+      mysql-server:
+        condition: service_healthy

@@ -1,29 +1,30 @@
 # zoom-dev
 
-ZOOM 开发者文档
+ZOOM 开发环境
 
-## 创建各模块硬链接
+## 环境准备
 
-MacOS 下使用 `ln` 命令创建硬链接，如下：
+ZOOM 开发环境依赖于以下工具：
 
-```shell
-git clone https://github.com/hb0730/zoom-app.git zoom-app
-git clone https://github.com/hb0730/zoom-support.git zoom-support
-git clone https://github.com/hb0730/zoom-dev.git zoom-dev
-cd zoom-dev
-ln -s ../zoom-app APP
-ln -s ../zoom-support BASIC
-ln -s ../zoom-env ENV
+- [jdk17](https://www.oracle.com/java/technologies/javase-jdk17-downloads.html)
+- [maven](https://maven.apache.org/download.cgi)
+- [docker](https://docs.docker.com/get-docker/)
+- [docker-compose](https://docs.docker.com/compose/install/)
+
+## 启动准备
+
+在 [./infra](./infra) 目录下执行以下命令，启动依赖服务：
+
+```docker
+docker-compose up -d
 ```
 
-Windows 下使用 `mklink` 命令创建硬链接，如下：
+## 启动服务
 
-```shell
-git clone https://github.com/hb0730/zoom-app.git zoom-app
-git clone https://github.com/hb0730/zoom-support.git zoom-support
-git clone https://github.com/hb0730/zoom-dev.git zoom-dev
-cd zoom-dev
-mklink /D APP ..\zoom-app
-mklink /D BASIC ..\zoom-support
-mklink /D ENV ..\zoom-env
-```
+1. 先执行`zoom-pom`模块下的`mvn install`命令
+2. 在启动其他`RPC-Server`
+3. 最后启动`APP`模块下的`ZoomApp`类
+
+## sql
+
+所有的sql文件都在[./sql](./sql)目录下
