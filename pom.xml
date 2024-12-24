@@ -21,7 +21,7 @@
         <!-- 服务模块-->
         <module>APP-P1</module>
         <!--语录-->
-        <module>APP-P3</module>
+        <module>APP-GOROKU</module>
         <!--Nav-->
         <module>APP-NAV</module>
     </modules>

@@ -1,0 +1,18 @@
+[submodule "BASIC"]
+	path = BASIC
+	url = https://github.com/zoom-projects/zoom-support.git
+[submodule "ENV"]
+	path = ENV
+	url = https://github.com/zoom-projects/zoom-env.git
+[submodule "APP"]
+	path = APP
+	url = https://github.com/zoom-projects/zoom-app.git
+[submodule "APP-GOROKU"]
+	path = APP-GOROKU
+	url = https://github.com/zoom-projects/zoom-goroku.git
+[submodule "APP-NAV"]
+	path = APP-NAV
+	url = https://github.com/zoom-projects/zoom-nav.git
+[submodule "APP-P1"]
+	path = APP-P1
+	url = https://github.com/zoom-projects/zoom-app-p1.git
