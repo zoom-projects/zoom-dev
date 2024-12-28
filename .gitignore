@@ -37,3 +37,7 @@ build/
 
 ## infrastructure
 ./infra/data/*
+
+application-hb0730.yaml
+application-hb0730.properties
+application-hb0730.yml
