@@ -24,6 +24,8 @@
         <module>APP-GOROKU</module>
         <!--Nav-->
         <module>APP-NAV</module>
+        <!--Resume-->
+        <module>APP-RESUME</module>
     </modules>
 
 </project>

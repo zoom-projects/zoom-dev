@@ -16,3 +16,6 @@
 [submodule "APP-P1"]
 	path = APP-P1
 	url = https://github.com/zoom-projects/zoom-app-p1.git
+[submodule "APP-RESUME"]
+	path = APP-RESUME
+	url = https://github.com/zoom-projects/zoom-resume.git
