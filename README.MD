@@ -27,5 +27,37 @@ docker-compose up -d
 
 ## sql
 
+> 用户名/密码： hb0730/qwe123!@#
+
 所有的sql文件都在[./sql](./sql)目录下
 
+## 如何运行
+
+```shell
+# 1. 先clone项目
+git clone  --recursive -submodules https://github.com/zoom-projects/zoom-dev.git
+# 2. 进入项目目录
+cd zoom-dev
+# 3. 先install BASIC模块
+ cd BASIC && mvn install -Dmaven.test.skip=true && cd ..
+
+# 4. 在install ENV模块
+cd ENV && mvn install -Dmaven.test.skip=true && cd ..
+
+# 6.启动APP 模块
+cd APP && mvn spring-boot:run
+```
+
+## 关于前端项目
+
+```shell
+# 先行条件可以安装[Volta](https://volta.sh/)
+# 1. 克隆前端项目
+git clone https://github.com/zoom-projects/zoom-app-ui.git
+# 2. 进入项目目录
+cd zoom-app-ui
+# 3. 安装依赖
+pnpm install
+# 4. 启动项目
+pnpm run dev
+```
