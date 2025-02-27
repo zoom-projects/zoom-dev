@@ -26,6 +26,8 @@
         <module>APP-NAV</module>
         <!--Resume-->
         <module>APP-RESUME</module>
+        <!--Domain-->
+        <module>APP-DOMAIN</module>
     </modules>
 
 </project>
