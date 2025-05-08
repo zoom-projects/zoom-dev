@@ -28,6 +28,8 @@
         <module>APP-RESUME</module>
         <!--Domain-->
         <module>APP-DOMAIN</module>
+        <!-- 诗词-->
+        <module>APP-POETRY</module>
     </modules>
 
 </project>
