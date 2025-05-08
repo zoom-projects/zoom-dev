@@ -23,5 +23,5 @@
 	path = APP-DOMAIN
 	url = https://github.com/zoom-projects/zoom-domain.git
 [submodule "APP-POETRY"]
-    path = APP-POETRY
-    url = https://github.com/zoom-projects/zoom-poetry.git
+	path = APP-POETRY
+	url = https://github.com/zoom-projects/zoom-poetry.git
