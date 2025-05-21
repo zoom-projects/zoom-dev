@@ -6,9 +6,16 @@
 
     <groupId>com.hb0730</groupId>
     <artifactId>zoom-dev</artifactId>
-    <version>1.0.0-SNAPSHOT</version>
+    <version>${version}</version>
     <packaging>pom</packaging>
 
+    <properties>
+        <version>1.0.0-SNAPSHOT</version>
+        <java.version>17</java.version>
+        <maven.compiler.source>17</maven.compiler.source>
+        <maven.compiler.target>17</maven.compiler.target>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
 
     <modules>
         <!-- 基础设施-->
@@ -32,4 +39,38 @@
         <module>APP-POETRY</module>
     </modules>
 
+    <!--    <build>-->
+    <!--        <plugins>-->
+    <!--            &lt;!&ndash; 统一版本号插件 &ndash;&gt;-->
+    <!--            <plugin>-->
+    <!--                <groupId>org.codehaus.mojo</groupId>-->
+    <!--                <artifactId>flatten-maven-plugin</artifactId>-->
+    <!--                <version>1.7.0</version>-->
+    <!--                <configuration>-->
+    <!--                    <updatePomFile>true</updatePomFile>-->
+    <!--                    <flattenMode>oss</flattenMode>-->
+    <!--                    <pomElements>-->
+    <!--                        <parent>expand</parent>-->
+    <!--                        <properties>keep</properties>-->
+    <!--                    </pomElements>-->
+    <!--                </configuration>-->
+    <!--                <executions>-->
+    <!--                    <execution>-->
+    <!--                        <id>flatten</id>-->
+    <!--                        <phase>process-resources</phase>-->
+    <!--                        <goals>-->
+    <!--                            <goal>flatten</goal>-->
+    <!--                        </goals>-->
+    <!--                    </execution>-->
+    <!--                    <execution>-->
+    <!--                        <id>flatten-clean</id>-->
+    <!--                        <phase>clean</phase>-->
+    <!--                        <goals>-->
+    <!--                            <goal>clean</goal>-->
+    <!--                        </goals>-->
+    <!--                    </execution>-->
+    <!--                </executions>-->
+    <!--            </plugin>-->
+    <!--        </plugins>-->
+    <!--    </build>-->
 </project>
