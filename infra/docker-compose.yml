@@ -7,7 +7,7 @@ services:
     volumes:
       - ./data/redis:/data
   mysql-server:
-    image: mysql:8
+    image: mysql:9
     container_name: mysql-server
     environment:
       MYSQL_ROOT_PASSWORD: 123456
