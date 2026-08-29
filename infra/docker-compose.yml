@@ -33,7 +33,7 @@ services:
     ports:
       - "5080:5080"
   nacos_server:
-    image: nacos/nacos-server:v2.5.1
+    image: nacos/nacos-server:v3.2.4
     container_name: nacos-standalone
     env_file:
       - ./nacos-mysql.env
